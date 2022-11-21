@@ -1,5 +1,4 @@
 /*
- * Copyright 2016, 2017, 2018, 2019 FabricMC
  * Copyright 2022 QuiltMC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,19 +14,14 @@
  * limitations under the License.
  */
 
-package net.fabricmc.fabric.test.item.mixin;
+package net.fabricmc.fabric.impl.item;
 
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.gen.Invoker;
+import org.jetbrains.annotations.ApiStatus;
 
-import net.minecraft.item.Item;
-import net.minecraft.potion.Potion;
-import net.minecraft.recipe.BrewingRecipeRegistry;
+import net.minecraft.item.ItemStack;
 
-@Mixin(BrewingRecipeRegistry.class)
-public interface BrewingRecipeRegistryAccessor {
-	@Invoker
-	static void callRegisterPotionRecipe(Potion input, Item item, Potion output) {
-		throw new UnsupportedOperationException();
-	}
+@ApiStatus.Internal
+public class RecipeRemainderHandler {
+	public static final ThreadLocal<ItemStack> REMAINDER_STACK = new ThreadLocal<>();
 }
+

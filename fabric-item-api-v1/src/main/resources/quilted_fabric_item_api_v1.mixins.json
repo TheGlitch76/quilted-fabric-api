@@ -8,9 +8,7 @@
     "ArmorItemMixin",
     "BrewingStandBlockEntityMixin",
     "ItemMixin",
-    "ItemStackMixin"
     "ItemStackMixin",
-    "LivingEntityMixin",
     "RecipeMixin"
   ],
   "client": [
