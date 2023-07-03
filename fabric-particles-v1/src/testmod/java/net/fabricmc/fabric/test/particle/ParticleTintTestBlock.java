@@ -15,6 +15,15 @@
  * limitations under the License.
  */
 
-package net.fabricmc.fabric.impl.client.indigo;
+package net.fabricmc.fabric.test.particle;
 
-public class IndigoConfig { }
+import net.minecraft.block.Block;
+
+public class ParticleTintTestBlock extends Block {
+	public final int color;
+
+	public ParticleTintTestBlock(Settings settings, int color) {
+		super(settings);
+		this.color = color;
+	}
+}
