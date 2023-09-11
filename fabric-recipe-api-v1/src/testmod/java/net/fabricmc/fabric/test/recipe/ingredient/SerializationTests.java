@@ -26,6 +26,8 @@ import net.minecraft.test.GameTestException;
 
 import net.fabricmc.fabric.api.gametest.v1.FabricGameTest;
 
+import net.minecraft.test.TestContext;
+
 public class SerializationTests {
 	/**
 	 * Check that trying to use a custom ingredient inside an array ingredient fails.
