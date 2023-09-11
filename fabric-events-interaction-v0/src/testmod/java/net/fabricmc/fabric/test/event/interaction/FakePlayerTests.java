@@ -17,8 +17,7 @@
 
 package net.fabricmc.fabric.test.event.interaction;
 
-import org.quiltmc.qsl.testing.api.game.QuiltGameTest;
-import org.quiltmc.qsl.testing.api.game.QuiltTestContext;
+import net.fabricmc.fabric.api.gametest.v1.FabricGameTest;
 
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
@@ -28,6 +27,7 @@ import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.Items;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.test.GameTest;
+import net.minecraft.test.TestContext;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
@@ -40,8 +40,8 @@ public class FakePlayerTests {
 	/**
 	 * Try placing a sign with a fake player.
 	 */
-	@GameTest(templateName = QuiltGameTest.EMPTY_STRUCTURE)
-	public void testFakePlayerPlaceSign(QuiltTestContext context) {
+	@GameTest(templateName = FabricGameTest.EMPTY_STRUCTURE)
+	public void testFakePlayerPlaceSign(TestContext context) {
 		// This is for Fabric internal testing only, if you copy this to your mod you're on your own...
 
 		BlockPos basePos = new BlockPos(0, 1, 0);
@@ -68,8 +68,8 @@ public class FakePlayerTests {
 	/**
 	 * Try breaking a beehive with a fake player (see {@code BeehiveBlockMixin}).
 	 */
-	@GameTest(templateName = QuiltGameTest.EMPTY_STRUCTURE)
-	public void testFakePlayerBreakBeehive(QuiltTestContext context) {
+	@GameTest(templateName = FabricGameTest.EMPTY_STRUCTURE)
+	public void testFakePlayerBreakBeehive(TestContext context) {
 		BlockPos basePos = new BlockPos(0, 1, 0);
 		context.setBlockState(basePos, Blocks.BEEHIVE);
 		context.spawnEntity(EntityType.BEE, basePos.up());
