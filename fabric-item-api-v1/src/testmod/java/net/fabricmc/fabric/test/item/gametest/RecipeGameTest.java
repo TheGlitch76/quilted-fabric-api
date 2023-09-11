@@ -17,6 +17,8 @@
 
 package net.fabricmc.fabric.test.item.gametest;
 
+import java.util.Objects;
+
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -33,8 +35,6 @@ import net.minecraft.world.World;
 
 import net.fabricmc.fabric.api.gametest.v1.FabricGameTest;
 import net.fabricmc.fabric.test.item.CustomDamageTest;
-
-import java.util.Objects;
 
 public class RecipeGameTest implements FabricGameTest {
 	@GameTest(templateName = EMPTY_STRUCTURE)

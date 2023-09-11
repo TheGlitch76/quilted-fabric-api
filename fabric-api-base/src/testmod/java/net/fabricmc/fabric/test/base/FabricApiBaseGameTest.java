@@ -17,11 +17,10 @@
 
 package net.fabricmc.fabric.test.base;
 
-import net.minecraft.test.TestContext;
-
 import org.spongepowered.asm.mixin.MixinEnvironment;
 
 import net.minecraft.test.GameTest;
+import net.minecraft.test.TestContext;
 
 import net.fabricmc.fabric.api.gametest.v1.FabricGameTest;
 
